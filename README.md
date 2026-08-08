@@ -20,7 +20,7 @@
 
 - Apple Silicon: M1, M2, M3, M4 и новее;
 - минимальная версия: macOS 14;
-- SHA-256: `acd7ff8aeed6ce9e8e554e111178aa03027e1215cefbdf7abec9ba9829df70a5`.
+- SHA-256: `041e3cb54d16cf76e6bbabf2ebf4c9e845e94f9b3bd69528725875308f5c2196`.
 
 Проверка файла:
 
