@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION="0.10.1"
-SHA256="374ea58d30c79ff470b6fea2ba08244922cab6cba4bf5fd6d818911b5fd38021"
+VERSION="0.10.2"
+SHA256="275e762b6cc74f57087f1b509dd2df577df04d4945771717eade348cd70da577"
 DMG_URL="https://github.com/Hunter9568/Strazh-Releases/releases/download/v${VERSION}/Strazh-${VERSION}-arm64.dmg"
 TEMP_DIR="$(mktemp -d /tmp/strazh-install.XXXXXX)"
 DMG="$TEMP_DIR/Strazh.dmg"
