@@ -18,13 +18,17 @@ cleanup() {
 trap cleanup EXIT
 
 echo "Скачиваю «Страж» ${VERSION}…"
-curl -fL --progress-bar "$DMG_URL" -o "$DMG"
+if [[ -n "${STRAZH_DMG_PATH:-}" ]]; then
+  cp "$STRAZH_DMG_PATH" "$DMG"
+else
+  curl -fL --progress-bar "$DMG_URL" -o "$DMG"
+fi
 echo "$SHA256  $DMG" | shasum -a 256 -c -
 
 mkdir -p "$MOUNT"
 hdiutil attach "$DMG" -nobrowse -readonly -mountpoint "$MOUNT" >/dev/null
 
-echo "Устанавливаю в $TARGET…"
+echo "Устанавливаю в ${TARGET}…"
 if [[ "$TARGET" == "/Applications/Страж.app" ]]; then
   sudo ditto "$MOUNT/Страж.app" "$TARGET"
 else
