@@ -29,25 +29,36 @@
 
 ## Скриншоты
 
-### Главный экран и голосовой помощник
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <a href="screenshots/01-main.png"><img src="screenshots/01-main.png" alt="Главный экран Стража"></a><br>
+      <b>Главный экран и голосовой помощник</b>
+    </td>
+    <td width="50%" align="center">
+      <a href="screenshots/02-chat.png"><img src="screenshots/02-chat.png" alt="AI-чат Стража"></a><br>
+      <b>AI-чат и веб-поиск</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="screenshots/03-commands.png"><img src="screenshots/03-commands.png" alt="Команды Стража"></a><br>
+      <b>Голосовые команды и сценарии</b>
+    </td>
+    <td width="50%" align="center">
+      <a href="screenshots/04-design.png"><img src="screenshots/04-design.png" alt="Дизайн Стража"></a><br>
+      <b>Персонализация и питомцы</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <a href="screenshots/05-ai-models.png"><img src="screenshots/05-ai-models.png" alt="Лаборатория моделей Стража" width="70%"></a><br>
+      <b>Локальный AI и лаборатория моделей</b>
+    </td>
+  </tr>
+</table>
 
-![Главный экран голосового помощника Страж](screenshots/01-main.png)
-
-### AI-чат с локальной моделью и веб-поиском
-
-![AI-чат Стража](screenshots/02-chat.png)
-
-### Каталог голосовых команд и сценариев
-
-![Редактор команд Стража](screenshots/03-commands.png)
-
-### Персонализация и экранные питомцы
-
-![Настройка дизайна и питомца](screenshots/04-design.png)
-
-### Локальный AI и лаборатория моделей
-
-![Настройка локального AI и моделей](screenshots/05-ai-models.png)
+Нажмите на любой снимок, чтобы открыть его в полном размере.
 
 ---
 
