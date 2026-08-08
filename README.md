@@ -5,7 +5,7 @@
 Голосовое управление Mac, AI-чат, собственные команды, визуальные сценарии,
 проекты, локальная база знаний и Telegram — в одном нативном приложении.
 
-[⬇️ Скачать «Страж» 0.10.0 для Mac — DMG](https://github.com/Hunter9568/Strazh-Releases/releases/download/v0.10.0/Strazh-0.10.0-arm64.dmg)
+[⬇️ Скачать «Страж» 0.10.1 для Mac — DMG](https://github.com/Hunter9568/Strazh-Releases/releases/download/v0.10.1/Strazh-0.10.1-arm64.dmg)
 
 [Возможности](#возможности) · [Все версии](https://github.com/Hunter9568/Strazh-Releases/releases) ·
 [Установка](#установка) ·
@@ -17,7 +17,7 @@
 > ключи лицензирования и данные покупателей здесь не публикуются.
 
 > [!IMPORTANT]
-> Для установки скачивайте только файл **`Strazh-0.10.0-arm64.dmg`** по большой
+> Для установки скачивайте только файл **`Strazh-0.10.1-arm64.dmg`** по большой
 > ссылке выше. Не используйте **Code → Download ZIP**, **Source code (zip)** или
 > **Source code (tar.gz)** — это автоматически созданные GitHub архивы страницы
 > с инструкциями, в них нет приложения.
@@ -119,7 +119,7 @@
 | Диск | Не менее 2 ГБ для приложения; локальные модели требуют дополнительное место |
 | Интернет | Не нужен для базового локального голоса; нужен для загрузки моделей, обновлений и облачного AI |
 
-Версия 0.10.0 предназначена только для macOS на Apple Silicon. Windows, Linux и
+Версия 0.10.1 предназначена только для macOS на Apple Silicon. Windows, Linux и
 Intel Mac этой сборкой не поддерживаются.
 
 ---
@@ -128,7 +128,7 @@ Intel Mac этой сборкой не поддерживаются.
 
 ### Обычный способ
 
-1. Нажмите [**скачать Strazh-0.10.0-arm64.dmg**](https://github.com/Hunter9568/Strazh-Releases/releases/download/v0.10.0/Strazh-0.10.0-arm64.dmg).
+1. Нажмите [**скачать Strazh-0.10.1-arm64.dmg**](https://github.com/Hunter9568/Strazh-Releases/releases/download/v0.10.1/Strazh-0.10.1-arm64.dmg).
 2. Дождитесь загрузки файла размером около 624 МБ.
 3. Откройте DMG и перенесите «Страж» в папку «Программы».
 4. Запустите приложение из папки «Программы».
@@ -142,24 +142,14 @@ Intel Mac этой сборкой не поддерживаются.
 Скачать установщик командой:
 
 ```bash
-curl -fL \
-  https://github.com/Hunter9568/Strazh-Releases/releases/download/v0.10.0/Strazh-0.10.0-arm64.dmg \
-  -o "$HOME/Downloads/Strazh-0.10.0-arm64.dmg"
-open "$HOME/Downloads/Strazh-0.10.0-arm64.dmg"
+curl -fL https://raw.githubusercontent.com/Hunter9568/Strazh-Releases/main/install.sh \
+  -o "$HOME/Downloads/install-strazh.sh"
+bash "$HOME/Downloads/install-strazh.sh"
 ```
 
-После открытия образа перенесите «Страж» в «Программы». Полностью установить в
-личную папку `~/Applications` можно так:
-
-```bash
-mkdir -p "$HOME/Applications"
-hdiutil attach "$HOME/Downloads/Strazh-0.10.0-arm64.dmg" -nobrowse
-ditto "/Volumes/Страж 0.10.0/Страж.app" "$HOME/Applications/Страж.app"
-hdiutil detach "/Volumes/Страж 0.10.0"
-open "$HOME/Applications/Страж.app"
-```
-
-Команды не отключают защиту macOS и не удаляют карантинный атрибут.
+Скрипт скачивает DMG, проверяет SHA-256, устанавливает «Страж» в `/Applications`,
+создаёт ярлык на рабочем столе и запускает приложение. macOS запросит пароль
+администратора для записи в «Программы». Скрипт не отключает Gatekeeper.
 
 ### Первый запуск без Apple Developer ID
 
@@ -235,16 +225,16 @@ open "$HOME/Applications/Страж.app"
 
 ## Проверка установщика
 
-SHA-256 версии 0.10.0:
+SHA-256 версии 0.10.1:
 
 ```text
-278da801a486e41a639d12cf7667c5621b69a652d57fddd13de06fc95e62eae0
+374ea58d30c79ff470b6fea2ba08244922cab6cba4bf5fd6d818911b5fd38021
 ```
 
 Проверка скачанного файла:
 
 ```bash
-shasum -a 256 "$HOME/Downloads/Strazh-0.10.0-arm64.dmg"
+shasum -a 256 "$HOME/Downloads/Strazh-0.10.1-arm64.dmg"
 ```
 
 Результат должен полностью совпасть со значением выше. SHA-256 — это публичный
@@ -284,7 +274,7 @@ shasum -a 256 "$HOME/Downloads/Strazh-0.10.0-arm64.dmg"
 
 ## Текущий статус
 
-Версия 0.10.0 — тестовая сборка для ограниченного распространения. Перед
+Версия 0.10.1 — тестовая сборка для ограниченного распространения. Перед
 массовой продажей рекомендуется пилотное тестирование на нескольких Mac и
 подписание приложения сертификатом Apple Developer ID.
 
